@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Blog</title>
+    <title>Courses</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <style>
@@ -18,7 +18,7 @@
 </style>
 
 <body>
-    <h2 style="text-align:center"> Blog Informationn </h2>
+    <h2 style="text-align:center"> Course Informationn </h2>
     <table align="center" style="margin: 0px auto;">
         <thead>
             <tr>
@@ -31,12 +31,12 @@
             </tr>
         </thead>
         <tbody>
-            {% for blog in blogs %}
+            {% for courses in one %}
             <tr>
-                <td>{{blog.CourseId}}</td>
-                <td>{{blog.Name}}</td>
-                <td>{{blog.Descr}}</td>
-                <td>{{blog.Value}}</td>
+                <td>{{one.CourseId}}</td>
+                <td>{{one.Name}}</td>
+                <td>{{one.Descr}}</td>
+                <td>{{one.Value}}</td>
                 <td>
                     <a href="/update/{{course.pk}}">Update</a>    
                 </td>
