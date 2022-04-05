@@ -30,7 +30,7 @@ def update_course(request,pk):
             return redirect('/search')
 
     context = {
-        'courses': coursess,
+        'courses': courses,
         'form': form,
     }
     return render(request,'update.html',context)
