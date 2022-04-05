@@ -1,2 +1,3 @@
-# Trabalho--Django
-Trabalho para Faculdade
+## Trabalho: Django
+
+University Project.
