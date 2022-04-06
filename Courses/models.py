@@ -7,6 +7,4 @@ class Course(models.Model):
     Value = models.IntegerField()
 
     class Meta:
-        model = Course
-        fields = ['CourseId', 'Name', 'Descr', 'Value',]
         db_table = 'courses'

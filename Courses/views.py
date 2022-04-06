@@ -16,8 +16,8 @@ def create_course(request):
     return render(request, 'create.html', {'form':form})
 
 def retrieve_course(request):
-    courses = Course.objects.all()
-    return render(request,'search.html',{'courses':courses} )
+    cours = Course.objects.all()
+    return render(request,'search.html',{'courses':cours} )
 
 def update_course(request,pk):
     courses = Course.objects.get(id=pk)
