@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+#Rotas da Aplicação
 urlpatterns = [
     path('', views.create_course, name='create-course'),
     path('search/', views.retrieve_course, name='retrieve-course'),

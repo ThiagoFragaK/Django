@@ -1,5 +1,6 @@
 from django.db import models
 
+# Modelo de Cursos
 class Course(models.Model):
     CourseId = models.CharField(max_length=30)
     Name = models.CharField(max_length=200)

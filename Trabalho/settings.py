@@ -29,7 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+#Declaração do Aplicativa
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'Trabalho.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
+#Configuração do Banco
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
