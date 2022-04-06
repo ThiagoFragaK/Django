@@ -18,35 +18,41 @@
 </style>
 
 <body>
-    <h2 style="text-align:center"> Course Informationn </h2>
-    <table align="center" style="margin: 0px auto;">
-        <thead>
-            <tr>
-                <th>Course Id</th>
-                <th>Name</th>
-                <th>Descr</th>
-                <th>Value</th>
-                <th>Edit Course</th>
-                <th>Remove Course</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for courses in one %}
-            <tr>
-                <td>{{one.CourseId}}</td>
-                <td>{{one.Name}}</td>
-                <td>{{one.Descr}}</td>
-                <td>{{one.Value}}</td>
-                <td>
-                    <a href="/update/{{course.pk}}">Update</a>    
-                </td>
-                <td>
-                    <a href="/delete/{{course.pk}}">Delete</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <div class="card text-center">
+        <div class="card-header">
+            <h2 style="text-align:center"> Course Informationn </h2>
+        </div>
+        <div class="card-body col-8 m-auto pt-4 pb-2 text-center">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>CourseId</th>
+                        <th>Name</th>
+                        <th>Descr</th>
+                        <th>Value</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in courses %}
+                    <tr>
+                        <td>{{course.CourseId}}</td>
+                        <td>{{course.Name}}</td>
+                        <td>{{course.Descr}}</td>
+                        <td>{{course.Value}}</td>
+                        <td>
+                            <a href="/update/{{cours.pk}}">Update</a>    
+                        </td>
+                        <td>
+                            <a href="/delete/{{cours.pk}}">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 
 </html>

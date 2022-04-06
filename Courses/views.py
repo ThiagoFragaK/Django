@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import CourseForm
 from .models import Course
 
+#Criação
 def create_course(request):
     if request.method == "POST":
         form = CourseForm(request.POST)
@@ -14,11 +15,11 @@ def create_course(request):
     else:
         form = CourseForm()
     return render(request, 'create.html', {'form':form})
-
+#Leitura
 def retrieve_course(request):
-    courses = Course.objects.all()
-    return render(request,'search.html',{'courses':courses} )
-
+    cours = Course.objects.all()
+    return render(request,'search.html',{'courses':cours} )
+#Editar
 def update_course(request,pk):
     courses = Course.objects.get(id=pk)
     form = CourseForm(instance=courses)
@@ -30,11 +31,11 @@ def update_course(request,pk):
             return redirect('/search')
 
     context = {
-        'courses': coursess,
+        'courses': courses,
         'form': form,
     }
     return render(request,'update.html',context)
-
+#Deletar
 def delete_course(request, pk):
     courses = Course.objects.get(id=pk)
 
